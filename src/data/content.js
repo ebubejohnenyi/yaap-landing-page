@@ -4,83 +4,139 @@
 export const nav = {
   brand: "Yaap",
   announcement: {
-    text: "Session 2024 — Early-bird registration now open",
-    ctaLabel: "Learn more",
+    text: "Your food concierge is coming to WhatsApp.",
+    ctaLabel: "Join the waitlist",
   },
   links: [
-    { label: "Features", href: "#features" },
-    { label: "Accounts", href: "#accounts" },
-    { label: "Company", href: "#company" },
-    { label: "Insight", href: "#insight" },
+    { label: "How it works", href: "#how-it-works" },
+    { label: "What Yaap can do", href: "#what-yaap-can-do" },
+    { label: "For vendors & riders", href: "#for-vendors-riders" },
+    { label: "About", href: "#about" },
   ],
+  ctaLabel: "Try Yaap",
 };
 
 export const hero = {
-  eyebrow: "Try it now!",
-  headline: ["Change the way you use your", "money"],
-  body: "From your everyday spending, to planning for your future with savings and investments, Yaap helps you get more from your money.",
-  ctaLabel: "Get Started Now",
-  rating: { score: "5.0", count: "120+", label: "reviews" },
-  stats: [
-    { label: "Currencies", value: "56+" },
-    { label: "Users Active", value: "" },
-    { label: "Saving", value: "$196,000" },
+  eyebrow: "Your personal food concierge",
+  headline: ["Tell Yaap", "what you want to eat."],
+  tagline: "Ask Yaap. Get it sorted.",
+  body: "Tell Yaap what you're craving, what you want to spend, and where you're going. We'll help you find it and get it ordered.",
+  ctaLabel: "Chat with Yaap",
+  secondaryCtaLabel: "See how it works",
+  chat: [
+    { from: "user", text: "hey yaap, i need lunch for 3 people around lekki" },
+    {
+      from: "yaap",
+      text: "Got you. I found 4 options nearby.",
+      options: ["Chicken & chips", "Jollof + chicken", "Shawarma combo", "Rice bowl"],
+      footer: "Want me to show you the best ones?",
+    },
+    { from: "user", text: "keep it under ₦4k please" },
+    { from: "yaap", text: "On it. Here's what fits ₦4k, delivery included." },
   ],
 };
 
-export const logos = ["Loom", "HubSpot", "OpenAI", "Raycast", "Zenefits"];
+export const problem = {
+  eyebrow: "Sound familiar?",
+  headline: "Ordering food shouldn't feel like a part-time job.",
+  steps: [
+    "Download another app",
+    "Create an account",
+    "Fill out forms",
+    "Scroll through 40 restaurants",
+    "Get to checkout",
+    "Realize it's over budget",
+  ],
+  resolutionEyebrow: "No phone storage wahala.",
+  resolutionHeadline: "No new app. No complicated menus. Just WhatsApp.",
+  resolutionBody: "Tell Yaap what you're craving, and your food concierge takes it from there.",
+};
 
-export const about = {
-  eyebrow: "About us",
-  headline: "One app for all your money things",
-  body: "Remove all the friction that stands in the way of your money goals.",
+export const whatYaapCanDo = {
+  eyebrow: "Meet Yaap",
+  headline: "Food ordering shouldn't feel like a chore.",
+  body: "Ask Yaap what you're craving and what you want to spend. Yaap helps you find it, order it, and get it delivered.",
   cards: [
     {
-      title: "Grow savings faster",
-      value: "$12,000",
-      variant: "dark",
+      title: "Order food",
+      body: "Tell Yaap what you're craving. It finds nearby options in seconds.",
+      chat: { user: "yaap, order suya for two", yaap: "Found 3 spots nearby. Want to see them?" },
     },
     {
-      title: "Send across the global",
-      variant: "light",
-      transfers: [
-        { amount: "$25,000", label: "Sent bro!" },
-        { amount: "$40,000", label: "Thanks Chris!" },
-      ],
+      title: "Order with your budget",
+      body: "Tell Yaap what you want to spend. It only shows options that fit.",
+      chat: { user: "jollof rice for 2, under ₦3k", yaap: "Got it — here's what fits ₦3k, delivery included." },
+    },
+    {
+      title: "Send a voice note",
+      body: "No time to type? Tell Yaap what you want, the way you'd tell a friend.",
+      chat: { userVoice: "0:14", yaap: "Got it — lunch for 2 around Yaba, on it." },
+    },
+    {
+      title: "Order again",
+      body: "Craving the same thing again? Yaap remembers what you like.",
+      chat: { user: "get me the usual", yaap: "Coming right up — jollof rice from Mama Put, like last time?" },
     },
   ],
 };
 
-export const values = {
-  eyebrow: "Values",
-  headline: "Make your spend, Well-spent",
-  body: "Manages a diversified group of specialized private credit brands with efficient tech-enabled processes.",
-  cards: [
-    {
-      title: "Transparency",
-      body: "A departure from the industry norm of ambiguity, Yaap, as a public and finest company.",
-      variant: "light",
-    },
-    {
-      title: "Creative expansion",
-      body: "Yaap proprietary fintech platform helps our subsidiaries locate and manage investments.",
-      variant: "light",
-    },
-    {
-      title: "Private Credit Investments",
-      body: "We provide access to unique private credit investments, a rare but valuable part of a sound investment portfolio.",
-      variant: "cream",
-    },
+export const howItWorks = {
+  eyebrow: "How it works",
+  headline: "Four steps. One chat.",
+  steps: [
+    { number: "1", title: "Ask Yaap", body: "Tell it what you're craving." },
+    { number: "2", title: "Yaap finds it", body: "It searches for options that fit what you want to spend." },
+    { number: "3", title: "You choose", body: "Review and confirm what you want." },
+    { number: "4", title: "It's sorted", body: "Yaap helps move the order forward." },
   ],
 };
 
-export const statsBanner = {
-  eyebrow: "Numbers",
-  headline: "Market and build the solutions",
-  stats: [
-    { value: "$14B", label: "Funds and syndicates" },
-    { value: "23k+", label: "Raised by active startups" },
+export const budgetFirst = {
+  eyebrow: "Budget-first",
+  headline: "Start with your budget. Not the menu.",
+  body: "Tell Yaap what you want and what you want to spend. It finds options that actually fit — delivery included.",
+  chat: [
+    { from: "user", text: "yaap, i need lunch for 3. amala + ewedu. ₦4k max." },
+    { from: "yaap", text: "Got you. I'm looking for options around ₦4k, including delivery." },
   ],
+};
+
+export const vendorsRiders = {
+  eyebrow: "For vendors & riders",
+  headline: "The marketplace behind the concierge.",
+  body: "Every request that comes through Yaap needs someone to fulfil it. Vendors list what they sell. Riders pick up and deliver. Yaap connects both to real, budget-matched demand.",
+  roles: [
+    {
+      title: "For vendors",
+      tagline: "More orders. Less marketplace noise.",
+      body: "Get orders that already match what a customer wants and can afford — no browsing, no haggling.",
+    },
+    {
+      title: "For riders",
+      tagline: "More deliveries. More predictable requests.",
+      body: "Get delivery requests as they come in, with clear pickup and drop-off details from the start.",
+    },
+  ],
+  gettingStarted: {
+    eyebrow: "Getting started",
+    headline: "Get set up in a few minutes.",
+    steps: [
+      { number: "1", text: "Open the Yaap app link on your phone's browser." },
+      { number: "2", text: "Tap \"Add to Home Screen\" (iPhone) or \"Install app\" (Android)." },
+      { number: "3", text: "Open Yaap from your home screen, just like any other app." },
+      { number: "4", text: "Sign up as a vendor or rider and start getting requests." },
+    ],
+    ctaLabel: "Open the Yaap app",
+    ctaHref: "https://yaap-app.vercel.app/",
+  },
+};
+
+// Held back until Yaap expands beyond food (groceries, pharmacy, errands, etc.) —
+// bring this section back into App.jsx once that broader concierge story is real.
+export const brandStatement = {
+  eyebrow: "The Yaap way",
+  headline: "Life is busy enough. Let Yaap handle the little things.",
+  body: "From dinner tonight to groceries for the week, Yaap is there when you need something done.",
 };
 
 export const faq = {
@@ -88,56 +144,68 @@ export const faq = {
   headline: "Frequently asked questions",
   items: [
     {
-      q: "How sending a bank transfer",
-      a: "Go to Transfers, choose the recipient's bank account, enter the amount and confirm with your PIN or biometric ID. Transfers typically land within one business day.",
-    },
-    {
-      q: "What is the scheduled payments feature?",
-      a: "The scheduled payments feature allows you to manage all of your subscriptions or recurring payments in one place. This way, you can view details for every payment, which include the amount, frequency, payment dates etc.",
+      q: "What is Yaap?",
+      a: "Yaap is your personal food concierge on WhatsApp. Tell Yaap what you're craving, what you want to spend, and where you need it delivered. Yaap helps you find a suitable option and place your order.",
       defaultOpen: true,
     },
     {
-      q: "How can I reactivate a terminated card?",
-      a: "Open Cards in the app, select the terminated card, and tap Reactivate. If the card was closed for security reasons, you'll be issued a new card number instead.",
+      q: "Do I need to download another app?",
+      a: "No. Yaap lives directly in WhatsApp, so you can chat with it just like you chat with a friend.",
     },
     {
-      q: "How about with a refund?",
-      a: "Refunds are returned to your original payment method and usually appear within 5–10 business days, depending on your bank.",
+      q: "What can I ask Yaap to do?",
+      a: "Right now, Yaap helps you order food — tell it what you're craving, your budget, and where you are. We're building out more ways Yaap can help beyond food.",
     },
     {
-      q: "How can add money to my account?",
-      a: "You can top up via bank transfer, debit card, or by linking an external account in Settings → Add Money.",
+      q: "How does ordering work?",
+      a: "Tell Yaap what you're craving and what you want to spend. Yaap finds options that fit, confirms the details with you, and helps get the order moving.",
+    },
+    {
+      q: "Can Yaap make decisions for me?",
+      a: "Yaap can recommend options and help you compare them, but you're always in control of what you choose and order.",
+    },
+    {
+      q: "Where does Yaap work?",
+      a: "Yaap currently operates in Lagos, starting with the neighborhoods and restaurants people order from most.",
     },
   ],
 };
 
 export const ctaBanner = {
-  headline: ["Change the way you", "use your", "money"],
-  body: "Join over million people who choose Yaap for fast and secure future banking.",
-  ctaLabel: "Get Started Now",
+  eyebrow: "Hungry?",
+  headline: ["What's for dinner?", "Ask Yaap."],
+  body: "No new app, no endless scrolling. Message Yaap on WhatsApp and let your food concierge help you find something good — within budget.",
+  ctaLabel: "Chat with Yaap",
 };
 
 export const footer = {
   brand: "Yaap",
   columns: [
     {
-      title: "Account",
-      links: ["Saving", "Join Accounts", "Crypto", "Freelance", "Commodities"],
+      title: "Product",
+      links: [
+        { label: "What Yaap can do", href: "#what-yaap-can-do" },
+        { label: "How it works", href: "#how-it-works" },
+        { label: "Chat with Yaap", href: "#" },
+        { label: "For vendors & riders", href: "#for-vendors-riders" },
+      ],
     },
     {
-      title: "Help",
-      links: ["Customer Help", "Community", "Blog", "Payment"],
+      title: "Explore",
+      links: [
+        { label: "About Yaap", href: "#about" },
+        { label: "FAQs", href: "#" },
+        { label: "Blog", href: "#" },
+        { label: "Contact", href: "#" },
+      ],
     },
     {
-      title: "Finance",
-      links: ["Cards", "Linked Accounts", "Contact", "Sustainability", "Career"],
-    },
-    {
-      title: "Company",
-      links: ["About Us", "Contact", "Sustainability", "Career"],
+      title: "Legal",
+      links: [
+        { label: "Privacy Policy", href: "#" },
+        { label: "Terms of Use", href: "#" },
+      ],
     },
   ],
-  address: ["181 Bay Street, Bay Wellington", "Tower, Suite 2, Toronto,", "Ontario M5J 2T3"],
-  legalLinks: ["Privacy Policy", "Terms of Use", "Disclosure"],
-  copyright: "© Yaap Finance Ltd 2026",
+  copyright: "© 2026 Yaap. All rights reserved.",
 };

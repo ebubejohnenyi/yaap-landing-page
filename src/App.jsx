@@ -1,10 +1,11 @@
 import AnnouncementBar from "./components/sections/AnnouncementBar";
 import Navbar from "./components/sections/Navbar";
 import Hero from "./components/sections/Hero";
-import LogoCloud from "./components/sections/LogoCloud";
-import About from "./components/sections/About";
-import Values from "./components/sections/Values";
-import StatsBanner from "./components/sections/StatsBanner";
+import TheProblem from "./components/sections/TheProblem";
+import WhatYaapCanDo from "./components/sections/WhatYaapCanDo";
+import HowItWorks from "./components/sections/HowItWorks";
+import BudgetFirst from "./components/sections/BudgetFirst";
+import ForVendorsRiders from "./components/sections/ForVendorsRiders";
 import FAQ from "./components/sections/FAQ";
 import CTABanner from "./components/sections/CTABanner";
 import Footer from "./components/sections/Footer";
@@ -16,10 +17,11 @@ export default function App() {
       <Navbar />
       <main>
         <Hero />
-        <LogoCloud />
-        <About />
-        <Values />
-        <StatsBanner />
+        <TheProblem />
+        <WhatYaapCanDo />
+        <HowItWorks />
+        <BudgetFirst />
+        <ForVendorsRiders />
         <FAQ />
         <CTABanner />
       </main>

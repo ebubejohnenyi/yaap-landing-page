@@ -10,8 +10,12 @@ export default function AnnouncementBar() {
     <div className="relative bg-brand-900 py-2 text-center text-xs text-white/90">
       <span className="inline-flex items-center gap-2">
         {nav.announcement.text}
-        <a href="#" className="underline underline-offset-2 hover:text-white">
+        <a
+          href="#"
+          className="inline-flex items-center gap-1 underline underline-offset-2 hover:text-white"
+        >
           {nav.announcement.ctaLabel}
+          <span aria-hidden>→</span>
         </a>
       </span>
       <button

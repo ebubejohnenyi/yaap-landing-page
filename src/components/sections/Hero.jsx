@@ -1,80 +1,109 @@
-import { Star, Globe, Sparkles, TrendingUp, Smartphone } from "lucide-react";
+import { CheckCheck, MessageCircle } from "lucide-react";
 import Container from "../ui/Container";
 import Button from "../ui/Button";
 import { hero } from "../../data/content";
 
+function ChatBubble({ message, delay }) {
+  const isUser = message.from === "user";
+
+  return (
+    <div
+      className={`animate-fade-in-up flex ${isUser ? "justify-end" : "justify-start"}`}
+      style={{ animationDelay: `${delay}ms` }}
+    >
+      <div
+        className={`max-w-[85%] rounded-2xl px-4 py-3 text-sm ${
+          isUser
+            ? "rounded-br-sm bg-brand-700 text-white"
+            : "rounded-bl-sm bg-white text-ink-900 shadow-sm shadow-black/5"
+        }`}
+      >
+        <p>{message.text}</p>
+
+        {message.options && (
+          <ul className="mt-2 space-y-1 border-t border-ink-900/10 pt-2">
+            {message.options.map((option) => (
+              <li key={option} className="text-ink-600">
+                • {option}
+              </li>
+            ))}
+          </ul>
+        )}
+
+        {message.footer && <p className="mt-2 text-ink-600">{message.footer}</p>}
+
+        {isUser && (
+          <div className="mt-1 flex justify-end">
+            <CheckCheck className="h-3.5 w-3.5 text-white/70" />
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
 export default function Hero() {
+  const chatStartDelay = 500;
+  const chatStagger = 350;
+
   return (
     <section className="pt-14 pb-20 lg:pt-20">
       <Container className="grid items-center gap-12 lg:grid-cols-2 lg:gap-8">
         {/* Copy column */}
         <div className="text-left">
-          <p className="text-xs font-semibold uppercase tracking-wider text-brand-600">
+          <p className="animate-fade-in-up text-xs font-semibold uppercase tracking-wider text-brand-600">
             {hero.eyebrow}
           </p>
-          <h1 className="mt-4 text-5xl leading-[1.05] tracking-tight text-ink-900 lg:text-6xl">
+          <h1
+            className="animate-fade-in-up mt-4 text-5xl leading-[1.05] tracking-tight text-ink-900 lg:text-6xl"
+            style={{ animationDelay: "80ms" }}
+          >
             {hero.headline[0]}{" "}
             <span className="font-serif italic font-normal">{hero.headline[1]}</span>
           </h1>
-          <p className="mt-6 max-w-md text-base text-ink-600">{hero.body}</p>
+          <p
+            className="animate-fade-in-up mt-3 font-serif text-2xl italic text-brand-700"
+            style={{ animationDelay: "140ms" }}
+          >
+            {hero.tagline}
+          </p>
+          <p
+            className="animate-fade-in-up mt-6 max-w-md text-base text-ink-600"
+            style={{ animationDelay: "220ms" }}
+          >
+            {hero.body}
+          </p>
 
-          <div className="mt-8 flex flex-wrap items-center gap-6">
+          <div
+            className="animate-fade-in-up mt-8 flex flex-wrap items-center gap-6"
+            style={{ animationDelay: "300ms" }}
+          >
             <Button>{hero.ctaLabel}</Button>
-            <div className="flex items-center gap-2">
-              <div className="flex text-amber-400">
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <Star key={i} className="h-4 w-4 fill-current" />
-                ))}
-              </div>
-              <div className="text-sm">
-                <span className="font-semibold text-ink-900">{hero.rating.score}</span>{" "}
-                <span className="text-ink-400">
-                  from {hero.rating.count} <a href="#" className="underline">reviews</a>
-                </span>
-              </div>
-            </div>
+            <a href="#how-it-works" className="text-sm font-medium text-ink-600 hover:text-ink-900">
+              {hero.secondaryCtaLabel}
+            </a>
           </div>
         </div>
 
-        {/* Visual column — 2x2 tile grid */}
-        <div className="grid grid-cols-2 gap-4">
-          {/* Phone mockup tile */}
-          <div className="col-span-1 flex aspect-[4/5] items-center justify-center rounded-3xl bg-cream-200">
-            <Smartphone className="h-16 w-16 text-brand-700/40" strokeWidth={1.25} />
-          </div>
-
-          {/* Currencies tile */}
-          <div className="col-span-1 flex aspect-[4/5] flex-col justify-between rounded-3xl bg-cream-100 p-6">
-            <p className="text-2xl font-semibold text-ink-900">{hero.stats[0].value}</p>
-            <div className="flex items-center justify-between">
-              <span className="text-sm text-ink-600">{hero.stats[0].label}</span>
-              <Globe className="h-6 w-6 text-ink-400" strokeWidth={1.25} />
+        {/* Visual column — WhatsApp conversation mockup */}
+        <div
+          className="animate-fade-in-up rounded-3xl bg-cream-200 p-4 sm:p-6"
+          style={{ animationDelay: "260ms" }}
+        >
+          <div className="flex items-center gap-2 border-b border-ink-900/10 pb-4">
+            <div className="flex h-9 w-9 items-center justify-center rounded-full bg-brand-800 text-white">
+              <MessageCircle className="h-4 w-4" strokeWidth={1.5} />
             </div>
-          </div>
-
-          {/* Users active tile */}
-          <div className="col-span-1 flex aspect-[4/5] flex-col justify-between rounded-3xl bg-cream-100 p-6">
-            <Sparkles className="h-6 w-6 text-brand-700" strokeWidth={1.25} />
             <div>
-              <div className="mb-2 flex -space-x-2">
-                {Array.from({ length: 3 }).map((_, i) => (
-                  <div
-                    key={i}
-                    className="h-7 w-7 rounded-full border-2 border-cream-100 bg-brand-400"
-                  />
-                ))}
-              </div>
-              <span className="text-sm text-ink-600">{hero.stats[1].label}</span>
+              <p className="text-sm font-semibold text-ink-900">Yaap</p>
+              <p className="text-xs text-ink-400">Online on WhatsApp</p>
             </div>
           </div>
 
-          {/* Saving tile */}
-          <div className="col-span-1 flex aspect-[4/5] flex-col justify-between rounded-3xl bg-brand-800 p-6 text-white">
-            <div className="flex items-center gap-1 text-lg font-semibold">
-              {hero.stats[2].value}
-              <TrendingUp className="h-4 w-4" />
-            </div>
-            <span className="text-sm text-white/70">{hero.stats[2].label}</span>
+          <div className="mt-4 flex flex-col gap-3">
+            {hero.chat.map((message, i) => (
+              <ChatBubble key={i} message={message} delay={chatStartDelay + i * chatStagger} />
+            ))}
           </div>
         </div>
       </Container>
